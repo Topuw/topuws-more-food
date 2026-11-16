@@ -1,0 +1,11 @@
+{
+  "item.topuws-jars.jar": "Jar",
+  "item.topuws-jars.normal_jar": "Jar",
+  "item.topuws-jars.water_jar": "Water Jar",
+  "item.topuws-jars.honey_jar": "Honey Jar",
+  "item.topuws-jars.jam_jar": "Sweet Berry Jam Jar",
+  "item.topuws-jars.jam_bread": "Bread with Sweet Berry Jam",
+  "item.topuws-jars.fried_egg": "Fried Egg",
+  "block.topuws-jars.jam_cauldron": "Jam Cauldron",
+  "itemGroup.topuws-jars.jars": "Topuw's Food Mod"
+}

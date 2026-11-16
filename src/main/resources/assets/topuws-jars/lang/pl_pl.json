@@ -1,0 +1,11 @@
+{
+  "item.topuws-jars.jar": "Słoik",
+  "item.topuws-jars.normal_jar": "Słoik",
+  "item.topuws-jars.water_jar": "Słoik wody",
+  "item.topuws-jars.honey_jar": "Słoik miodu",
+  "item.topuws-jars.jam_jar": "Słoik z dżemem jagodowym",
+  "item.topuws-jars.jam_bread": "Chleb z dżemem jagodowym",
+  "item.topuws-jars.fried_egg": "Smażone jajko",
+  "block.topuws-jars.jam_cauldron": "Kocioł z dżemem",
+  "itemGroup.topuws-jars.jars": "Topuw's Food Mod"
+}

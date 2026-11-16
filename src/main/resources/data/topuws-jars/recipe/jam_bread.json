@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:bread",
+    "topuws-jars:jam_jar"
+  ],
+  "result": {
+    "count": 1,
+    "id": "topuws-jars:jam_bread"
+  }
+}
