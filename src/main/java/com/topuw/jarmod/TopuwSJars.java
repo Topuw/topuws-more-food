@@ -23,6 +23,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.food.Foods;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -30,6 +31,7 @@ import net.minecraft.world.item.ItemUtils;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
@@ -46,6 +48,8 @@ import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -102,6 +106,18 @@ public class TopuwSJars implements ModInitializer {
 					properties
 			), BlockBehaviour.Properties.ofFullCopy(Blocks.WATER_CAULDRON));
 
+	public static final Block CUTTING_BOARD = registerBlock(
+			"cutting_board",
+			properties -> new Block(properties) {
+				@Override
+				public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+					return Block.box(1, 0, 3, 15, 1, 13);
+				}
+			},
+			BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()
+	);
+	public static final Item CUTTING_BOARD_ITEM = registerBlockItem("cutting_board", CUTTING_BOARD);
+
 	// Alias fields for compatibility
 	public static final Item NORMAL_JAR_ITEM = JAR;
 	public static final Item WATER_JAR_ITEM = WATER_JAR;
@@ -128,6 +144,7 @@ public class TopuwSJars implements ModInitializer {
 							output.accept(JAM_JAR);
 							output.accept(JAM_BREAD);
 							output.accept(FRIED_EGG);
+							output.accept(CUTTING_BOARD_ITEM);
 						})
 						.build()
 		);
@@ -297,6 +314,11 @@ public class TopuwSJars implements ModInitializer {
 		ResourceKey<Block> key = ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MOD_ID, name));
 		T block = factory.apply(properties.setId(key));
 		return Registry.register(BuiltInRegistries.BLOCK, key, block);
+	}
+
+	private static BlockItem registerBlockItem(String name, Block block) {
+		ResourceKey<Item> key = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MOD_ID, name));
+		return Registry.register(BuiltInRegistries.ITEM, key, new BlockItem(block, new Item.Properties().setId(key)));
 	}
 
 	public static Identifier id(String path) {
