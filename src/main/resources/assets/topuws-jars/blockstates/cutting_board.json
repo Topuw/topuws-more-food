@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "topuws-jars:block/oak_board"
+    }
+  }
+}
