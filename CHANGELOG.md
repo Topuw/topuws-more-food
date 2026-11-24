@@ -11,11 +11,6 @@
 - Recipe unlocks when the relevant ingredients are discovered, including the cutting board, knives, jars, and food recipes.
 - New item textures for the cutting board, knives, and chicken wings.
 
-### Improved
-- The cutting board faces the player when placed and can be broken by hand or with any tool. It drops itself when broken.
-- Corrected the board's inventory model, texture loading, and hitbox.
-- Added English and Polish names for the new items.
-
 ### Knife durability
 | Knife | Durability |
 |---|---:|
@@ -42,11 +37,6 @@ Minecraft 26.3, Fabric Loader 0.20.1 or newer, Java 25 or newer.
 - Surowe skrzydełka można upiec w piecu, wędzarni lub na ognisku. Pieczenie w piecu trwa 150 ticków (7,5 sekundy).
 - Receptury odblokowują się po zdobyciu odpowiednich składników — dotyczy to deski, noży, słoików i jedzenia.
 - Dodano tekstury deski, noży i skrzydełek z kurczaka.
-
-### Ulepszenia
-- Deska ustawia się przodem do gracza podczas stawiania. Można ją zniszczyć ręką lub dowolnym narzędziem; wypada po zniszczeniu.
-- Poprawiono model deski w ekwipunku, ładowanie tekstury i hitbox.
-- Dodano angielskie i polskie nazwy nowych przedmiotów.
 
 ### Trwałość noży
 | Nóż | Trwałość |
