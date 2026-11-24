@@ -143,16 +143,18 @@ public class CuttingBoardBlock extends Block {
 	}
 
 	private static InteractionResult collectWings(Level level, BlockPos pos, Player player) {
+		List<Display.ItemDisplay> chicken = findBoardItems(level, pos, Items.CHICKEN);
 		List<Display.ItemDisplay> wings = findBoardItems(level, pos, TopuwSJars.RAW_CHICKEN_WING);
-		if (wings.isEmpty()) {
+		List<Display.ItemDisplay> boardItems = chicken.isEmpty() ? wings : chicken;
+		if (boardItems.isEmpty()) {
 			return InteractionResult.PASS;
 		}
 		if (level.isClientSide()) {
 			return InteractionResult.SUCCESS;
 		}
 
-		ItemStack stack = new ItemStack(TopuwSJars.RAW_CHICKEN_WING, wings.size());
-		wings.forEach(Display.ItemDisplay::discard);
+		ItemStack stack = new ItemStack(chicken.isEmpty() ? TopuwSJars.RAW_CHICKEN_WING : Items.CHICKEN, boardItems.size());
+		boardItems.forEach(Display.ItemDisplay::discard);
 		if (!player.addItem(stack)) {
 			player.drop(stack, false, Prediction.SERVER_ONLY);
 		}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "P": "minecraft:birch_pressure_plate"
+  },
+  "pattern": ["PP"],
+  "result": {
+    "count": 1,
+    "id": "topuws-jars:birch_cutting_board"
+  }
+}

@@ -122,6 +122,60 @@ public class TopuwSJars implements ModInitializer {
 			BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion().strength(0.5F, 0.5F)
 	);
 	public static final Item CUTTING_BOARD_ITEM = registerBlockItem("cutting_board", CUTTING_BOARD);
+	public static final Block SPRUCE_CUTTING_BOARD = registerBlock(
+			"spruce_cutting_board",
+			CuttingBoardBlock::new,
+			BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS).noOcclusion().strength(0.5F, 0.5F)
+	);
+	public static final Item SPRUCE_CUTTING_BOARD_ITEM = registerBlockItem("spruce_cutting_board", SPRUCE_CUTTING_BOARD);
+	public static final Block JUNGLE_CUTTING_BOARD = registerBlock(
+			"jungle_cutting_board",
+			CuttingBoardBlock::new,
+			BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS).noOcclusion().strength(0.5F, 0.5F)
+	);
+	public static final Item JUNGLE_CUTTING_BOARD_ITEM = registerBlockItem("jungle_cutting_board", JUNGLE_CUTTING_BOARD);
+	public static final Block BIRCH_CUTTING_BOARD = registerBlock(
+			"birch_cutting_board",
+			CuttingBoardBlock::new,
+			BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS).noOcclusion().strength(0.5F, 0.5F)
+	);
+	public static final Item BIRCH_CUTTING_BOARD_ITEM = registerBlockItem("birch_cutting_board", BIRCH_CUTTING_BOARD);
+	public static final Block ACACIA_CUTTING_BOARD = registerBlock(
+			"acacia_cutting_board",
+			CuttingBoardBlock::new,
+			BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS).noOcclusion().strength(0.5F, 0.5F)
+	);
+	public static final Item ACACIA_CUTTING_BOARD_ITEM = registerBlockItem("acacia_cutting_board", ACACIA_CUTTING_BOARD);
+	public static final Block CHERRY_CUTTING_BOARD = registerBlock(
+			"cherry_cutting_board",
+			CuttingBoardBlock::new,
+			BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).noOcclusion().strength(0.5F, 0.5F)
+	);
+	public static final Item CHERRY_CUTTING_BOARD_ITEM = registerBlockItem("cherry_cutting_board", CHERRY_CUTTING_BOARD);
+	public static final Block DARK_OAK_CUTTING_BOARD = registerBlock(
+			"dark_oak_cutting_board",
+			CuttingBoardBlock::new,
+			BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).noOcclusion().strength(0.5F, 0.5F)
+	);
+	public static final Item DARK_OAK_CUTTING_BOARD_ITEM = registerBlockItem("dark_oak_cutting_board", DARK_OAK_CUTTING_BOARD);
+	public static final Block MANGROVE_CUTTING_BOARD = registerBlock(
+			"mangrove_cutting_board",
+			CuttingBoardBlock::new,
+			BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).noOcclusion().strength(0.5F, 0.5F)
+	);
+	public static final Item MANGROVE_CUTTING_BOARD_ITEM = registerBlockItem("mangrove_cutting_board", MANGROVE_CUTTING_BOARD);
+	public static final Block PALE_OAK_CUTTING_BOARD = registerBlock(
+			"pale_oak_cutting_board",
+			CuttingBoardBlock::new,
+			BlockBehaviour.Properties.ofFullCopy(Blocks.PALE_OAK_PLANKS).noOcclusion().strength(0.5F, 0.5F)
+	);
+	public static final Item PALE_OAK_CUTTING_BOARD_ITEM = registerBlockItem("pale_oak_cutting_board", PALE_OAK_CUTTING_BOARD);
+	public static final Block POPLAR_CUTTING_BOARD = registerBlock(
+			"poplar_cutting_board",
+			CuttingBoardBlock::new,
+			BlockBehaviour.Properties.ofFullCopy(Blocks.POPLAR_PLANKS).noOcclusion().strength(0.5F, 0.5F)
+	);
+	public static final Item POPLAR_CUTTING_BOARD_ITEM = registerBlockItem("poplar_cutting_board", POPLAR_CUTTING_BOARD);
 
 	// Alias fields for compatibility
 	public static final Item NORMAL_JAR_ITEM = JAR;
@@ -149,9 +203,18 @@ public class TopuwSJars implements ModInitializer {
 							output.accept(JAM_JAR);
 							output.accept(JAM_BREAD);
 							output.accept(FRIED_EGG);
-							output.accept(CUTTING_BOARD_ITEM);
 							output.accept(RAW_CHICKEN_WING);
 							output.accept(COOKED_CHICKEN_WING);
+							output.accept(CUTTING_BOARD_ITEM);
+							output.accept(SPRUCE_CUTTING_BOARD_ITEM);
+							output.accept(JUNGLE_CUTTING_BOARD_ITEM);
+							output.accept(BIRCH_CUTTING_BOARD_ITEM);
+							output.accept(ACACIA_CUTTING_BOARD_ITEM);
+							output.accept(CHERRY_CUTTING_BOARD_ITEM);
+							output.accept(DARK_OAK_CUTTING_BOARD_ITEM);
+							output.accept(MANGROVE_CUTTING_BOARD_ITEM);
+							output.accept(PALE_OAK_CUTTING_BOARD_ITEM);
+							output.accept(POPLAR_CUTTING_BOARD_ITEM);
 							output.accept(WOODEN_KNIFE);
 							output.accept(STONE_KNIFE);
 							output.accept(COPPER_KNIFE);

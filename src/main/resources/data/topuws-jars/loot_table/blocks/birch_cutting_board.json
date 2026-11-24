@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {"type": "minecraft:survives_explosion"},
+      "entries": [{"type": "minecraft:item", "name": "topuws-jars:birch_cutting_board"}],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "topuws-jars:blocks/birch_cutting_board"
+}
