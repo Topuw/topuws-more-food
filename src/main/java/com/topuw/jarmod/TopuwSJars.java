@@ -119,7 +119,7 @@ public class TopuwSJars implements ModInitializer {
 	public static final Block CUTTING_BOARD = registerBlock(
 			"cutting_board",
 			CuttingBoardBlock::new,
-			BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()
+			BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion().strength(0.5F, 0.5F)
 	);
 	public static final Item CUTTING_BOARD_ITEM = registerBlockItem("cutting_board", CUTTING_BOARD);
 

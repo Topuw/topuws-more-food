@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
       "model": "topuws-jars:block/oak_board"
+    },
+    "facing=east": {
+      "model": "topuws-jars:block/oak_board",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "topuws-jars:block/oak_board",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "topuws-jars:block/oak_board",
+      "y": 270
     }
   }
 }
