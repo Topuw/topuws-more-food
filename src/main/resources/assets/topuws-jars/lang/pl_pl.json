@@ -8,5 +8,15 @@
   "item.topuws-jars.fried_egg": "Smażone jajko",
   "block.topuws-jars.jam_cauldron": "Kocioł z dżemem",
   "block.topuws-jars.cutting_board": "Deska do krojenia",
+  "item.topuws-jars.raw_chicken_wing": "Surowe skrzydełko kurczaka",
+  "item.topuws-jars.cooked_chicken_wing": "Pieczone skrzydełko kurczaka",
+  "item.topuws-jars.wooden_knife": "Drewniany nóż",
+  "item.topuws-jars.stone_knife": "Kamienny nóż",
+  "item.topuws-jars.copper_knife": "Miedziany nóż",
+  "item.topuws-jars.iron_knife": "Żelazny nóż",
+  "item.topuws-jars.golden_knife": "Złoty nóż",
+  "item.topuws-jars.diamond_knife": "Diamentowy nóż",
+  "item.topuws-jars.netherite_knife": "Netherytowy nóż",
+  "item.topuws-jars.cutting_board": "Deska do krojenia",
   "itemGroup.topuws-jars.jars": "Topuw's Food Mod"
 }

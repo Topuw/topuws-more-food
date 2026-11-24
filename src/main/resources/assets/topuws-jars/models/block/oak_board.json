@@ -2,7 +2,7 @@
 	"format_version": "26.3",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "oak_board",
+		"1": "topuws-jars:block/oak_board",
 		"particle": "topuws-jars:block/oak_board"
 	},
 	"elements": [

@@ -8,5 +8,15 @@
   "item.topuws-jars.fried_egg": "Fried Egg",
   "block.topuws-jars.jam_cauldron": "Jam Cauldron",
   "block.topuws-jars.cutting_board": "Cutting Board",
+  "item.topuws-jars.raw_chicken_wing": "Raw Chicken Wing",
+  "item.topuws-jars.cooked_chicken_wing": "Cooked Chicken Wing",
+  "item.topuws-jars.wooden_knife": "Wooden Knife",
+  "item.topuws-jars.stone_knife": "Stone Knife",
+  "item.topuws-jars.copper_knife": "Copper Knife",
+  "item.topuws-jars.iron_knife": "Iron Knife",
+  "item.topuws-jars.golden_knife": "Golden Knife",
+  "item.topuws-jars.diamond_knife": "Diamond Knife",
+  "item.topuws-jars.netherite_knife": "Netherite Knife",
+  "item.topuws-jars.cutting_board": "Deska do krojenia",
   "itemGroup.topuws-jars.jars": "Topuw's Food Mod"
 }

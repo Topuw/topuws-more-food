@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": "minecraft:cobblestone",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "M",
+    "S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "topuws-jars:stone_knife"
+  }
+}

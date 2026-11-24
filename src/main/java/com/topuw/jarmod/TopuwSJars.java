@@ -31,7 +31,6 @@ import net.minecraft.world.item.ItemUtils;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
@@ -48,8 +47,6 @@ import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
-import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.VoxelShape;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -99,6 +96,19 @@ public class TopuwSJars implements ModInitializer {
 	public static final Item FRIED_EGG = registerItem("fried_egg", Item::new, new Item.Properties()
 			.food(FRIED_EGG_FOOD, Consumables.DEFAULT_FOOD));
 
+	public static final Item RAW_CHICKEN_WING = registerItem("raw_chicken_wing", Item::new, new Item.Properties()
+			.food(new FoodProperties.Builder().nutrition(1).saturationModifier(0.1F).build(), Consumables.DEFAULT_FOOD));
+	public static final Item COOKED_CHICKEN_WING = registerItem("cooked_chicken_wing", Item::new, new Item.Properties()
+			.food(new FoodProperties.Builder().nutrition(3).saturationModifier(0.3F).build(), Consumables.DEFAULT_FOOD));
+
+	public static final Item WOODEN_KNIFE = registerItem("wooden_knife", KnifeItem::new, new Item.Properties().durability(59));
+	public static final Item STONE_KNIFE = registerItem("stone_knife", KnifeItem::new, new Item.Properties().durability(131));
+	public static final Item COPPER_KNIFE = registerItem("copper_knife", KnifeItem::new, new Item.Properties().durability(190));
+	public static final Item IRON_KNIFE = registerItem("iron_knife", KnifeItem::new, new Item.Properties().durability(250));
+	public static final Item GOLDEN_KNIFE = registerItem("golden_knife", KnifeItem::new, new Item.Properties().durability(32));
+	public static final Item DIAMOND_KNIFE = registerItem("diamond_knife", KnifeItem::new, new Item.Properties().durability(1561));
+	public static final Item NETHERITE_KNIFE = registerItem("netherite_knife", KnifeItem::new, new Item.Properties().durability(2031));
+
 	public static final Block JAM_CAULDRON = registerBlock("jam_cauldron", properties ->
 			new LayeredCauldronBlock(
 					(Biome.Precipitation) null,
@@ -108,12 +118,7 @@ public class TopuwSJars implements ModInitializer {
 
 	public static final Block CUTTING_BOARD = registerBlock(
 			"cutting_board",
-			properties -> new Block(properties) {
-				@Override
-				public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-					return Block.box(1, 0, 3, 15, 1, 13);
-				}
-			},
+			CuttingBoardBlock::new,
 			BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()
 	);
 	public static final Item CUTTING_BOARD_ITEM = registerBlockItem("cutting_board", CUTTING_BOARD);
@@ -145,6 +150,15 @@ public class TopuwSJars implements ModInitializer {
 							output.accept(JAM_BREAD);
 							output.accept(FRIED_EGG);
 							output.accept(CUTTING_BOARD_ITEM);
+							output.accept(RAW_CHICKEN_WING);
+							output.accept(COOKED_CHICKEN_WING);
+							output.accept(WOODEN_KNIFE);
+							output.accept(STONE_KNIFE);
+							output.accept(COPPER_KNIFE);
+							output.accept(IRON_KNIFE);
+							output.accept(GOLDEN_KNIFE);
+							output.accept(DIAMOND_KNIFE);
+							output.accept(NETHERITE_KNIFE);
 						})
 						.build()
 		);

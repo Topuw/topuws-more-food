@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "topuws-jars:block/oak_board"
+    "model": "topuws-jars:item/cutting_board"
   }
 }
